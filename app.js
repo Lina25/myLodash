@@ -5,7 +5,4 @@
 	console.log(array);
 	var maxResult = myLodash.max(array);
 	console.log(maxResult);
-  
-  
 })();
-
