@@ -55,8 +55,7 @@
     
       //range
     myLodash.range = function (start, end, step) {
-      // start/end validation
-      // step validation
+      if((start>end) || (step < 0) ) {return undefined;}
       var arr = [];
       for (var i = start; i <= end; i += step) {
         arr.push(i);
@@ -98,7 +97,7 @@
     
     //clamp
     myLodash.clamp = function (number, lower, upper) {
-      // lower/upper validation
+      if(lower>upper) {return undefined;}
       return Math.max(lower, Math.min(number, upper));
       //return number <= lower ? lower : number >= upper ? upper : number;
     };
@@ -143,13 +142,14 @@
       return -1;
     };
 
+    //forEach
     myLodash.forEach = function (array, predicate) {
-      // array validation
       for(var i = 0; i < array.length; i++){
         predicate(array[i]);
       }
     };
 
+    //groupBy
     myLodash.groupBy = function (array, predicate) {
       var result = {};
 
@@ -165,6 +165,7 @@
       return result;
     };
 
+    //sortBy
     myLodash.sortBy = function(array){
       for(var i = 0; i < array.length; i++){
         for(var j = 0; j < array.length; j++){

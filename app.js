@@ -102,13 +102,13 @@
 		 console.log(users);
 		 var findIndexResult = myLodash.getIndex(users, function (item) { return item.user === "Peter"; });
 		 console.log(findIndexResult);
-
-		 // groupBy
+ 
+    // groupBy
 		 console.log("Test groupBy");
 		 var result = myLodash.groupBy([6.1, 4.2, 6.3], Math.floor);
 		 console.log(result);
 
-		 // sortBy
+    // sortBy
 
 		 console.log("Test sortBy");
 		 var arr = [3, 5, 1, 6, 7, 8, 9, 2];
